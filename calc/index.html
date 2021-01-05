@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head >
+
+    <title>Average Entry Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- code to calculate for each exchange -->
+    <script src='./calcs.js'></script>
+    
+    <script src='./main.js'></script>
+    
+    
+</head>
+<body>
+    
+    <div class='container' style='max-width: 500px;' >
+
+        <div class='row' style='margin-bottom: 5px; margin-top: 5px'>
+            <div class='col'>
+                Add an order
+            </div>
+        </div>
+
+        <div class="container-p-0">
+            <div class="row">
+                <div class="col-4"><input class="form-control" type="text" placeholder="Quantity" id='quantity_el'></div>
+                <div class="col-1">@</div>
+                <div class="col-5"><input class="form-control" type="text" placeholder="Price" id='price_el'></div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-primary" onclick='addorder()'>Add</button>
+                </div>
+            </div>
+        </div>        
+
+        <div class='row' style='margin-bottom: 5px; margin-top: 5px'>
+            <div class='col'>
+                Entries
+            </div>
+        </div>
+
+        <div class='row' style='margin-bottom: 5px; margin-top: 5px'>
+            <div class='col'>
+                <div class="" style=" max-height: 400px; min-height:300px; overflow:auto; background-color: rgb(217, 229, 233)">
+                    <ul class="list-group" id='entries_el'>
+                    </ul>                
+                </div>  
+            </div>
+        </div> 
+
+
+
+        <div class='row' style='margin-bottom: 20px'>
+            <div class='col' style='text-align: center;'>
+                <small> average entry price </small> 
+                <h1 style='font-size:5em;' id='jumbotext'>0</h1>
+                <span id='numcontracts_el'>0 USD size</span>
+                <span id='onexchange_el'>on BitMEX</span>
+            </div>
+          
+        </div>        
+ 
+        <div class='row'>
+            <div class='col' style='text-align:center'>
+
+                <button type="button" class="btn btn-danger" onclick="setexchange('bitmex')">BitMEX</button>
+                <button type="button" class="btn btn-warning" onclick="setexchange('bybit')">ByBit</button>
+                <button type="button" class="btn btn-success" onclick="setexchange('deribit')">Deribit</button>
+
+            </div>
+          
+        </div>          
+
+    </div>
+
+    <script>
+        
+        // addentry( 1000, 1234 );
+        // addentry( 1000, 1234 );
+        // addentry( 1000, 1234 );
+
+    </script>
+</body>
+</html>
